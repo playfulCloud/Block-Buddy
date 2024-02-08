@@ -2,11 +2,17 @@ package com.blockbuddy.alpha.Building.Entity;
 
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
-@Entity
 @Data
-@Table(name = "Building")
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+@Entity
+@Table(name = "buildings")
 public class Building {
 
     @Id
@@ -15,7 +21,4 @@ public class Building {
 
     @Column(name = "name")
     private String name;
-
-
-
 }
