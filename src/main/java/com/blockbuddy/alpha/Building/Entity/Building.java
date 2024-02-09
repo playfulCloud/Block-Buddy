@@ -1,6 +1,6 @@
 package com.blockbuddy.alpha.Building.Entity;
 
-import com.blockbuddy.alpha.electricitySupplier.Electricity;
+import com.blockbuddy.alpha.electricitySupplier.Entity.Electricity;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;

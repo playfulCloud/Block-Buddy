@@ -2,6 +2,7 @@ package com.blockbuddy.alpha.Building.Service;
 
 import com.blockbuddy.alpha.Building.Entity.Building;
 import com.blockbuddy.alpha.Building.Repository.BuildingRepository;
+import com.blockbuddy.alpha.electricitySupplier.Repository.ElectricityRepository;
 import jakarta.transaction.Transactional;
 import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
