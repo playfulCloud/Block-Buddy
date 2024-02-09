@@ -1,5 +1,4 @@
 package com.blockbuddy.alpha;
-
 import com.blockbuddy.alpha.Building.Entity.Address;
 import com.blockbuddy.alpha.Building.Entity.Basement;
 import com.blockbuddy.alpha.Building.Entity.Building;
@@ -23,6 +22,7 @@ public class DatabaseInit {
     public void init() {
 
         for (int i = 0; i < 10; i++) {
+
             Building buildingToSave = Building.builder()
                     .name("Blok " + (i + 1))
                     .build();
@@ -31,9 +31,7 @@ public class DatabaseInit {
                     .street("ul. Długa " + i)
                     .city("Kraków")
                     .region("Małopolskie")
-                    .building(buildingToSave)
                     .build();
-
 
             List<Basement> basements = new ArrayList<>();
             for (int j = 0; j < 5; j++) {
@@ -57,7 +55,7 @@ public class DatabaseInit {
 
             buildingToSave.setParkingSpaces(parkingSpaces);
             buildingToSave.setBasements(basements);
-            buildingToSave.setAddresses(address);
+            buildingToSave.setAddress(address);
             buildingService.save(buildingToSave);
         }
 

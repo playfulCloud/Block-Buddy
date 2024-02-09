@@ -25,9 +25,10 @@ public class Building {
     @Column(name = "name")
     private String name;
 
-    @OneToOne(cascade = CascadeType.ALL, mappedBy = "building")
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "address_id", referencedColumnName = "id")
     @OnDelete(action = OnDeleteAction.SET_NULL)
-    private Address addresses;
+    private Address address;
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "building")
     @OnDelete(action = OnDeleteAction.SET_NULL)

@@ -1,6 +1,5 @@
 package com.blockbuddy.alpha.Building.Entity;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -16,8 +15,8 @@ import lombok.NoArgsConstructor;
 public class Address {
 
     @Id
-    @Column(name = "building_id")
-    private int buildingId;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private int id;
 
     @Column(name = "street")
     private String street;
@@ -27,11 +26,5 @@ public class Address {
 
     @Column(name = "region")
     private String region;
-
-    @OneToOne
-    @MapsId
-    @JoinColumn(name = "building_id")
-    @JsonBackReference
-    private Building building;
 
 }

@@ -17,13 +17,13 @@ public class ParkingSpace {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "parking_space_id")
     private int id;
 
     @Column(name = "parking_space_number")
     private int number;
 
     @Column(name = "apartment_id")
+    //@todo zamodelować mieszkanie
     private int apartmetId;
 
     @ManyToOne
