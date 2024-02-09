@@ -1,5 +1,6 @@
 package com.blockbuddy.alpha.Building.Entity;
 
+import com.blockbuddy.alpha.electricitySupplier.Electricity;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -37,4 +38,8 @@ public class Building {
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "building")
     @OnDelete(action = OnDeleteAction.SET_NULL)
     private List<ParkingSpace> parkingSpaces;
+
+    @OneToMany(cascade = CascadeType.PERSIST, mappedBy = "building")
+    private List<Electricity> electricityProviders;
+
 }
