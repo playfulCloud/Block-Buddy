@@ -19,5 +19,8 @@ public class Electricity {
    @Column(name = "name")
    private String name;
 
+   @Column(name = "pricePerKWh")
+    private double price;
+
 
 }
